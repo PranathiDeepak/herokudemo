@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- Bootstrap CSS -->
+<link rel="stylesheet"
+href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-
+Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+crossorigin="anonymous">
+<title>MeraPulse</title>
+</head>
+<nav class="navbar navbar-dark bg-dark navbar-fixed-top">
+<a class="navbar-brand" href="#">Heart Disease Prediction</a>
+
+</nav>
+<body>
+<div class="container-fluid">
+<div class="col-lg-12">
+<form action="{{ url_for('predict') }}" method="post">
+<br>
+<br>
+<div class="form-group">
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<label for="ID">ID </label>
+</div>
+<div class="col-lg-8 col-md-8">
+<input type="text" class="form-control" id="ID" name="ID" placeholder="Cholestrol">
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<label for="age">Enter your age</label>
+</div>
+<div class="col-lg-8 col-md-8">
+<input type="text" class="form-control" id="age" name="age" placeholder="Your current age in
+years">
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<label for="sex">Enter your Gender</label>
+</div>
+<div class="col-lg-8 col-md-8">
+<select class="form-control" id="sex" name="sex">
+<option value="1">Male</option>
+<option value="0">Female</option>
+</select>
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<label for="Height">Height </label>
+</div>
+<div class="col-lg-8 col-md-8">
+<input type="text" class="form-control" id="Height" name="Height" placeholder="Your Heigh i cm ">
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<label for="Weight">Weight </label>
+</div>
+<div class="col-lg-8 col-md-8">
+<input type="text" class="form-control" id="Weight" name="Weight" placeholder="Weight">
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<label for="Ap_hi">Ap_hi </label>
+</div>
+<div class="col-lg-8 col-md-8">
+<input type="text" class="form-control" id="Ap_hi" name="Ap_hi" placeholder="Ap_hi">
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<label for="Ap_lo">Ap_lo</label>
+</div>
+<div class="col-lg-8 col-md-8">
+<input type="text" class="form-control" id="Ap_lo" name="Ap_lo" placeholder="Ap_lo">
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<label for="chol">Cholestrol in mg/dl </label>
+</div>
+<div class="col-lg-8 col-md-8">
+<input type="text" class="form-control" id="chol" name="chol" placeholder="Cholestrol">
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<label for="Glucose">Glucose</label>
+</div>
+<div class="col-lg-8 col-md-8">
+<input type="text" class="form-control" id="Glucose" name="Glucose" placeholder="Glucose">
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<label for="Smoke">Smoke</label>
+</div>
+<div class="col-lg-8 col-md-8">
+<input type="text" class="form-control" id="Smoke" name="Smoke" placeholder="Smoke">
+</div>
+</div>
+<br>
+<div class="row">
+<div class="col-lg-4 col-md-4">
+<label for="Alcohol">Alcohol</label>
+</div>
+<div class="col-lg-8 col-md-8">
+<input type="text" class="form-control" id="Alcohol" name="Alcohol" placeholder="Alcohol">
+</div>
+</div>
+<br>
+<br>
+<br>
+<center>
+<button type="submit" class="btn btn-danger" value="submit">Submit</button>
+</center>
+</form>
+</div>
+</div>
+<br>
+<br>
+
+{{prediction_text }}
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-
+KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+integrity="sha384-
+ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+crossorigin="anonymous"></script>
+<scriptsrc="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+integrity="sha384-
+JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+crossorigin="anonymous"></script>
+</body>
+<style>
+body {
+background: black;
+}
+.col-lg-4 {
+ color: #ffffff;
+}
+</style>
+</html>
